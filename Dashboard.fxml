@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#drag" onMousePressed="#click" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoard.DashboardController">
+   <children>
+      <HBox prefHeight="34.0" prefWidth="1000.0" styleClass="dashboard-top" stylesheets="@../design/design.css">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="18">
+               <HBox.margin>
+                  <Insets left="8.0" top="8.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <Label prefHeight="31.0" prefWidth="411.0" text="Babbar Rajput Bank Limited-Client Side Software" textFill="#f8f7f7">
+               <padding>
+                  <Insets left="12.0" top="4.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="icon" fill="#fcf8f8" glyphName="MINUS" onMouseClicked="#ninimizeApp" size="20" style="-fx-cursor: hand;">
+               <HBox.margin>
+                  <Insets left="510.0" right="10.0" top="7.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#fcf6f6" glyphName="CLOSE" onMouseClicked="#closeApp" size="25" style="-fx-cursor: hand;" styleClass="close-button">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <Pane layoutY="34.0" prefHeight="566.0" prefWidth="240.0" styleClass="dashboard-sidebar" stylesheets="@../design/design.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="150.0" prefWidth="240.0" styleClass="dashboard-profilepic" stylesheets="@../design/design.css">
+               <children>
+                  <Circle fx:id="profilepic" fill="DODGERBLUE" radius="50.0" stroke="BLACK" strokeType="INSIDE" styleClass="dashboard-profilepic">
+                     <VBox.margin>
+                        <Insets left="70.0" top="10.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Text fx:id="name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Name Here" textAlignment="CENTER" wrappingWidth="240.1708984375">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <Button layoutY="165.0" mnemonicParsing="false" onMouseClicked="#accountInformation" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="    Account Information" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#withdraw" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="    Withdraw" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutY="265.0" mnemonicParsing="false" onMouseClicked="#deposit" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="    Deposit" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutY="315.0" mnemonicParsing="false" onMouseClicked="#transactionHistory" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="    Transaction Histroy" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutY="365.0" mnemonicParsing="false" onMouseClicked="#transferAmount" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="    Transfer Money" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="-2.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#changepin" prefHeight="50.0" prefWidth="240.0" styleClass="dashboard-menu" stylesheets="@../design/design.css" text="  Change PIN" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="15.0" styleClass="dashboard-menu-icons" />
+               </graphic>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="6.0" layoutY="396.0" size="15.0" styleClass="dashboard-menu-icons" />
+            <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" layoutX="7.0" layoutY="344.0" size="15.0" styleClass="dashboard-menu-icons" />
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="7.0" layoutY="295.0" size="15.0" styleClass="dashboard-menu-icons" />
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_DOWN" layoutX="7.0" layoutY="244.0" size="15.0" styleClass="dashboard-menu-icons" />
+            <FontAwesomeIconView fill="WHITE" glyphName="BANK" layoutX="8.0" layoutY="196.0" size="15.0" styleClass="dashboard-menu-icons" />
+         </children>
+      </Pane>
+      <Pane layoutX="240.0" layoutY="34.0" prefHeight="60.0" prefWidth="760.0">
+         <children>
+            <Label layoutX="51.0" layoutY="20.0" text="User DashBoard " textFill="#797979">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="HOME" layoutX="652.0" layoutY="35.0" onMouseClicked="#mainScreen" size="25" style="-fx-cursor: hand;" />
+            <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="690.0" layoutY="36.0" onMouseClicked="#logout" size="25" style="-fx-cursor: hand;" />
+         </children>
+      </Pane>
+      <Pane fx:id="dashboard_main" layoutX="240.0" layoutY="94.0" prefHeight="506.0" prefWidth="760.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>
